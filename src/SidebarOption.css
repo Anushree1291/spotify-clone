@@ -1,24 +1,69 @@
-.sidebarOption{
-    color: grey;
+.sidebarOption {
     display: flex;
-    height: 40 px;
-    cursor: pointer;
     align-items: center;
-    transition: 200ms color ease-in;
-}
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    border-radius: 10px;
+    min-width: none;
+  }
+  
+  .sidebarOption:hover {
+    background-color: #282828;
+  }
+  
+  .sidebar_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .sidebar_container_albumLogo,
+  .sidebarOption_icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar_container_albumLogo:hover,
+  .sidebarOption_icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .sidebar_container_albumLogo_placeholder {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-right: 10px;
+  }
+  
+  .sidebar_container_songInfo {
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .sidebar_container_songInfo > p {
+    
+    font-size: 12px;
+    color: gray;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .sidebarOption_placeholder {
+    width: 30px;
+    height: 30px;
 
-.sidebar > hr{
-    border: 1px solid #282828;
-    width: 90%;
-    margin: 10px auto;
-}
-
-.sidebarOption:hover{
-    color: white;
-}
-
-.sidebarOption_icon {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
+  }
+  
+  .sidebar.collapsed .sidebar_container_albumLogo_placeholder {
+    display: none;
+  }

@@ -1,33 +1,78 @@
-export const initialState ={
+export const initialState = {
     user: null,
-    playlists:[],
+    playlists: [],
     playing: false,
     item: null,
-//    token: "BQB3_qxDr9qW66NHCATq64OicaXIvIOL7Ilp7YKQicZ8vEgDP3Sa4hbP5esJbDcV5kYcJsbXdEEDfEqSwvnPZh64PuN14OzJ6ym0NHP4jvXThmwhtrQ2RYw9J3wPM5-4K8c4R92AUnGN66gH-yLw1n3oIDXNJgf14EYi1RXKmxaFBAz1BTfegqHsSUKIIbdayF-IRwfyaop_ZmaOzezS"
-};
-
-
-export const reducer = (state, action) => {
-    console.log(action);
-
-    switch(action.type){
-        case "SET_USER":
-            return {
-                ...state,
-                user: action.user
-            };
-        
-        case "SET_TOKEN":
-            return {
-                ...state,
-                token: action.token
-            };
-        case "SET_PLAYLISTS":
-            return {
-                ...state,
-                playlists: action.playlists
-            }
-        default:
-            return state;
+    token: null,
+    discover_weekly: null,
+    newReleases: null,
+    featuredplaylists: null,
+    categories: null,
+    mysavedtracks: null,
+    userplaylists: null,
+    followedartists: null,
+    recommendations: null,
+  };
+  
+  export const reducer = (state, action) => {
+    switch (action.type) {
+      case "SET_USER":
+        return {
+          ...state,
+          user: action.user,
+        };
+      case "SET_TOKEN":
+        return {
+          ...state,
+          token: action.token,
+        };
+      case "SET_PLAYLISTS":
+        return {
+          ...state,
+          playlists: action.playlists,
+        };
+      case "SET_DISCOVER_WEEKLY":
+        return {
+          ...state,
+          discover_weekly: action.discover_weekly,
+        };
+      case "NEW_RELEASES":
+        return {
+          ...state,
+          newReleases: action.newReleases,
+        };
+      case "FEATURED_PLAYLISTS":
+        return {
+          ...state,
+          featuredplaylists: action.featuredplaylists,
+        };
+      case "CATEGORIES":
+        return {
+          ...state,
+          categories: action.categories,
+        };
+      case "MY_SAVED_TRACKS":
+        return {
+          ...state,
+          mysavedtracks: action.mysavedtracks,
+        };
+      case "USER_PLAYLISTS":
+        return {
+          ...state,
+          userplaylists: action.userplaylists,
+        };
+      case "FOLLOWED_ARTISTS":
+        return {
+          ...state,
+          followedartists: action.followedartists,
+        };
+      case "RECOMMENDATIONS":
+        return {
+          ...state,
+          recommendations: action.recommendations,
+        };
+      default:
+        return state;
     }
-};
+  };
+  

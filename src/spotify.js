@@ -7,11 +7,18 @@ const redirectUri ="http://localhost:3000/"
 const clientId ="a7c06a5289c544db8bfc04f7b1e1850a"
 
 const scopes = [
-    "user-read-currently-playing",
-    "user-read-recently-played",
-    "user-read-playback-state",
-    "user-top-read",
-    "user-modify-playback-state",
+  'user-read-private',
+  'user-read-email',
+  'user-library-read',
+  'user-follow-read',
+  'user-top-read',
+  'user-read-playback-state',
+  'user-modify-playback-state',
+  'playlist-read-private',
+  'playlist-read-collaborative',
+  'playlist-modify-public',
+  'playlist-modify-private',
+  'streaming'
   ];
 
 
